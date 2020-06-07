@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name" translatable="false">Memory</string>
+    <string name="debug" translatable="false">regular</string>
+    <string name="app_id" translatable="false">1537893283094745</string>
+    <string name="jouer">Jouer</string>
+    <string name="memory" translatable="false">Memory</string>
+    <string name="facile">Facile</string>
+    <string name="niveau_de_difficult">Niveau de difficulté</string>
+    <string name="temps">Temps</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="score">Score</string>
+    <string name="th_mes">Thèmes</string>
+    <string name="animaux">Animaux</string>
+</resources>

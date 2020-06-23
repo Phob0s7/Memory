@@ -16,16 +16,26 @@ public class DifficultySelectFragment extends Fragment {
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = LayoutInflater.from(Shared.context).inflate(R.layout.difficulty_select_fragment, container, false);
 		DifficultyView difficulty1 = view.findViewById(R.id.select_difficulty_1);
-		setOnClick(difficulty1, 1);
-
+		DifficultyView difficulty2 = view.findViewById(R.id.select_difficulty_2);
+		setOnClickFacile(difficulty1, 1);
+		setOnClickMoyen(difficulty2, 2);
 		return view;
 	}
 
-	private void setOnClick(View view, final int difficulty) {
+	private void setOnClickFacile(View view, final int difficulty1) {
 		view.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				Shared.eventBus.notify(new DifficultySelectedEvent(difficulty));
+				Shared.eventBus.notify(new DifficultySelectedEvent(difficulty1));
+			}
+		});
+	}
+
+	private void setOnClickMoyen(View view, final int difficulty2) {
+		view.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Shared.eventBus.notify(new DifficultySelectedEvent(difficulty2));
 			}
 		});
 	}

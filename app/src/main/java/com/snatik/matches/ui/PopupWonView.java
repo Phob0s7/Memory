@@ -22,6 +22,7 @@ public class PopupWonView extends RelativeLayout {
 	private TextView mTime;
 	private TextView mScore;
 	private ImageView mBackButton;
+	private ImageView mNextButton;
 	private Handler mHandler;
 
 	public PopupWonView(Context context) {
@@ -34,9 +35,16 @@ public class PopupWonView extends RelativeLayout {
 		mTime = findViewById(R.id.time_bar_text);
 		mScore = findViewById(R.id.score_bar_text);
 		mBackButton = findViewById(R.id.button_back);
+		mNextButton = findViewById(R.id.button_next);
 		FontLoader.setTypeface(context, new TextView[] { mTime, mScore }, Font.GROBOLD);
 		mHandler = new Handler();
 		mBackButton.setOnClickListener(new View.OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				Shared.eventBus.notify(new BackGameEvent());
+			}
+		});
+		mNextButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				Shared.eventBus.notify(new BackGameEvent());

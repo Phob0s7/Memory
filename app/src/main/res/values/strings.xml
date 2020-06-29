@@ -3,10 +3,9 @@
 
     <string name="app_name">Memory</string>
     <string name="debug">regular</string>
-    <string name="background_image">Background image</string>
     <string name="title">Title</string>
     <string name="facile">Facile</string>
-    <string name="difficult">Difficulté</string>
+    <string name="difficult">Difficultés</string>
     <string name="moyen">Moyen</string>
     <string name="memory">Memory</string>
     <string name="jouer">Jouer</string>
@@ -20,5 +19,7 @@
     <string name="mario_kart">Mario Kart</string>
     <string name="th_mes">Thèmes</string>
     <string name="tile">Tile</string>
+    <string name="background_image" />
+    <string name="difficult_s">Difficultés</string>
 
 </resources>

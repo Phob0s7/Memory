@@ -13,12 +13,11 @@ public class BoardArrangment {
 
 	// like {0-2, 4-3, 1-5}
 	public Map<Integer, Integer> pairs;
-	// like {0-mosters_20, 1-mosters_12, 2-mosters_20, ...}
 	public Map<Integer, String> tileUrls;
 
 	/**
-	 *            The id is the number between 0 and number of possible tiles of
-	 *            this theme
+	 *  The id is the number between 0 and number of possible tiles of
+	 *  this theme
 	 * @return The Bitmap of the tile
 	 */
 	public Bitmap getTileBitmap(int id, int size) {

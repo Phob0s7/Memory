@@ -36,8 +36,8 @@ public class TileView extends FrameLayout {
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();
-		mTopImage = (RelativeLayout) findViewById(R.id.image_top);
-		mTileImage = (ImageView) findViewById(R.id.image);
+		mTopImage = findViewById(R.id.image_top);
+		mTileImage = findViewById(R.id.image);
 	}
 
 	public void setTileImage(Bitmap bitmap) {
@@ -68,13 +68,10 @@ public class TileView extends FrameLayout {
 
 	public class FlipAnimation extends Animation {
 		private Camera camera;
-
 		private View fromView;
 		private View toView;
-
 		private float centerX;
 		private float centerY;
-
 		private boolean forward = true;
 
 		public FlipAnimation(View fromView, View toView) {

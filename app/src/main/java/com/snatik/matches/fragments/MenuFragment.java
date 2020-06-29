@@ -25,8 +25,8 @@ public class MenuFragment extends Fragment {
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.menu_fragment, container, false);
-		mTitle = (ImageView) view.findViewById(R.id.title);
-		mStartGameButton = (Button) view.findViewById(R.id.start_game_button1);
+		mTitle = view.findViewById(R.id.title);
+		mStartGameButton = view.findViewById(R.id.start_game_button1);
 		mStartGameButton.setOnClickListener(new View.OnClickListener() {
 
 			@Override
@@ -47,7 +47,6 @@ public class MenuFragment extends Fragment {
 
 	protected void animateAllAssetsOff(AnimatorListenerAdapter adapter) {
 		// title
-		// 120dp + 50dp + buffer(30dp)
 		ObjectAnimator titleAnimator = ObjectAnimator.ofFloat(mTitle, "translationY", Utils.px(-200));
 		titleAnimator.setInterpolator(new AccelerateInterpolator(2));
 		titleAnimator.setDuration(300);

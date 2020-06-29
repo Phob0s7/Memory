@@ -137,8 +137,8 @@ public class Engine extends EventObserverAdapter {
 		// place the board
 		List<String> tileImageUrls = mPlayingGame.theme.tileImageUrls;
 		Collections.shuffle(tileImageUrls);
-		boardArrangment.pairs = new HashMap<Integer, Integer>();
-		boardArrangment.tileUrls = new HashMap<Integer, String>();
+		boardArrangment.pairs = new HashMap<>();
+		boardArrangment.tileUrls = new HashMap<>();
 		int j = 0;
 		for (int i = 0; i < ids.size(); i++) {
 			if (i + 1 < ids.size()) {
@@ -173,6 +173,7 @@ public class Engine extends EventObserverAdapter {
 					int totalTime = mPlayingGame.boardConfiguration.time;
 					GameState gameState = new GameState();
 					mPlayingGame.gameState = gameState;
+
 					// remained seconds
 					gameState.remainedSeconds = totalTime - passedSeconds;
 					gameState.passedSeconds = passedSeconds;

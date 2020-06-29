@@ -18,9 +18,6 @@ public class ScreenController {
 	private static List<Screen> openedScreens = new ArrayList<Screen>();
 	private FragmentManager mFragmentManager;
 
-	private ScreenController() {
-	}
-
 	public static ScreenController getInstance() {
 		if (mInstance == null) {
 			mInstance = new ScreenController();
@@ -28,7 +25,7 @@ public class ScreenController {
 		return mInstance;
 	}
 
-	public static enum Screen {
+	public enum Screen {
 		MENU,
 		GAME,
 		DIFFICULTY,
@@ -57,7 +54,6 @@ public class ScreenController {
 
 	public boolean onBack() {
 		if (openedScreens.size() > 0) {
-			Screen screenToRemove = openedScreens.get(openedScreens.size() - 1);
 			openedScreens.remove(openedScreens.size() - 1);
 			if (openedScreens.size() == 0) {
 				return true;

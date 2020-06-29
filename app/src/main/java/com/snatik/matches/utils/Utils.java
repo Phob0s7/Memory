@@ -4,7 +4,6 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.RectF;
-import android.media.ThumbnailUtils;
 import com.snatik.matches.common.Shared;
 
 public class Utils {

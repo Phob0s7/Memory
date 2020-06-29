@@ -1,5 +1,6 @@
 package com.snatik.matches.ui;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Handler;
 import android.util.AttributeSet;
@@ -31,10 +32,10 @@ public class PopupWonView extends RelativeLayout {
 	public PopupWonView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		LayoutInflater.from(context).inflate(R.layout.popup_won_view, this, true);
-		mTime = (TextView) findViewById(R.id.time_bar_text);
-		mScore = (TextView) findViewById(R.id.score_bar_text);
-		mBackButton = (ImageView) findViewById(R.id.button_back);
-		mNextButton = (ImageView) findViewById(R.id.button_next);
+		mTime = findViewById(R.id.time_bar_text);
+		mScore = findViewById(R.id.score_bar_text);
+		mBackButton = findViewById(R.id.button_back);
+		mNextButton = findViewById(R.id.button_next);
 
 		mHandler = new Handler();
 		
@@ -53,10 +54,11 @@ public class PopupWonView extends RelativeLayout {
 		});
 	}
 
+	@SuppressLint("SetTextI18n")
 	public void setGameState(final GameState gameState) {
 		int min = gameState.remainedSeconds / 60;
 		int sec = gameState.remainedSeconds - min * 60;
-		mTime.setText(" " + String.format("%02d", min) + ":" + String.format("%02d", sec));
+		mTime.setText(String.format(" %s:%s", String.format("%02d", min), String.format("%02d", sec)));
 		mScore.setText("" + 0);
 		
 		mHandler.postDelayed(new Runnable() {

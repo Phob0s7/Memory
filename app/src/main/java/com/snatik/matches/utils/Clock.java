@@ -11,7 +11,7 @@ public class Clock {
 	}
 
 	public static class PauseTimer extends CountDownClock {
-		private OnTimerCount mOnTimerCount = null;
+		private OnTimerCount mOnTimerCount;
 
 		public PauseTimer(long millisOnTimer, long countDownInterval, boolean runAtStart, OnTimerCount onTimerCount) {
 			super(millisOnTimer, countDownInterval, runAtStart);
@@ -49,21 +49,13 @@ public class Clock {
 		mPauseTimer.create();
 	}
 
-	public void cancel() {
-		if (mPauseTimer != null) {
-			mPauseTimer.mOnTimerCount = null;
-			mPauseTimer.cancel();
-		}
-	}
-
 	public long getPassedTime() {
 		return mPauseTimer.timePassed();
 	}
 
 	public interface OnTimerCount {
-		public void onTick(long millisUntilFinished);
-
-		public void onFinish();
+		void onTick(long millisUntilFinished);
+		void onFinish();
 	}
 
 }

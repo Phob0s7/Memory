@@ -10,7 +10,7 @@ public class Themes {
 		Theme theme = new Theme();
 		theme.id = 1;
 		theme.name = "Animals";
-		theme.tileImageUrls = new ArrayList<String>();
+		theme.tileImageUrls = new ArrayList<>();
 		// 6 drawables
 		for (int i = 1; i <= 6; i++) {
 			theme.tileImageUrls.add(URI_DRAWABLE + String.format("animals_%d", i));
@@ -22,7 +22,7 @@ public class Themes {
 		Theme theme = new Theme();
 		theme.id = 2;
 		theme.name = "MarioKart";
-		theme.tileImageUrls = new ArrayList<String>();
+		theme.tileImageUrls = new ArrayList<>();
 		// 8 drawables
 		for (int i = 1; i <= 8; i++) {
 			theme.tileImageUrls.add(URI_DRAWABLE + String.format("mariokart_%d", i));

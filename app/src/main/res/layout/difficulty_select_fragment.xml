@@ -44,7 +44,7 @@
         android:layout_marginTop="52dp"
         android:background="#FFFFFF"
         android:gravity="center"
-        android:text="Difficultés"
+        android:text="@string/difficult_s"
         android:textColor="#00DDFF"
         android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -52,7 +52,7 @@
 
     <com.snatik.matches.ui.DifficultyView
         android:id="@+id/difficultyView2"
-        android:layout_width="109dp"
+        android:layout_width="133dp"
         android:layout_height="48dp"
         android:layout_marginTop="160dp"
         android:layout_marginEnd="152dp"
@@ -65,7 +65,7 @@
 
         <TextView
             android:id="@+id/Moyen"
-            android:layout_width="match_parent"
+            android:layout_width="133dp"
             android:layout_height="match_parent"
             android:background="#01E2FF"
             android:text="@string/moyen"

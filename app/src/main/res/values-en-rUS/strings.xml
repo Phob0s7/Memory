@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facile">Easy</string>
+    <string name="moyen">Medium</string>
+    <string name="jouer">Play</string>
+    <string name="temps">Time</string>
+    <string name="animaux">Animals</string>
+    <string name="th_mes">Themes</string>
+    <string name="difficult_s">Difficulty</string>
+</resources>

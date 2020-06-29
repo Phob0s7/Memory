@@ -1,11 +1,11 @@
 package com.snatik.matches.fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import com.snatik.matches.R;
 import com.snatik.matches.common.Shared;
@@ -29,10 +29,10 @@ public class GameFragment extends BaseFragment {
 		ViewGroup view = (ViewGroup) inflater.inflate(R.layout.game_fragment, container, false);
 		view.setClipChildren(false);
 		((ViewGroup)view.findViewById(R.id.game_board)).setClipChildren(false);
-		mTime = (TextView) view.findViewById(R.id.time_bar_text);
-		mTextTime = (TextView) view.findViewById(R.id.temps);
+		mTime = view.findViewById(R.id.time_bar_text);
+		mTextTime = view.findViewById(R.id.temps);
 		mBoardView = BoardView.fromXml(getActivity().getApplicationContext(), view);
-		FrameLayout frameLayout = (FrameLayout) view.findViewById(R.id.game_container);
+		FrameLayout frameLayout = view.findViewById(R.id.game_container);
 		frameLayout.addView(mBoardView);
 		frameLayout.setClipChildren(false);
 
@@ -62,6 +62,7 @@ public class GameFragment extends BaseFragment {
 		startClock(time);
 	}
 	
+	@SuppressLint({"DefaultLocale", "SetTextI18n"})
 	private void setTime(int time) {
 		int min = time / 60;
 		int sec = time - min*60;

@@ -16,12 +16,11 @@ public class DifficultySelectFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = LayoutInflater.from(Shared.context).inflate(R.layout.difficulty_select_fragment, container, false);
-        Theme theme = Shared.engine.getSelectedTheme();
 
-        DifficultyView difficulty1 = (DifficultyView) view.findViewById(R.id.difficultyView);
+        DifficultyView difficulty1 = view.findViewById(R.id.difficultyView);
         setOnClick(difficulty1, 1);
 
-        DifficultyView difficulty2 = (DifficultyView) view.findViewById(R.id.difficultyView2);
+        DifficultyView difficulty2 = view.findViewById(R.id.difficultyView2);
         setOnClick(difficulty2, 2);
 
         return view;

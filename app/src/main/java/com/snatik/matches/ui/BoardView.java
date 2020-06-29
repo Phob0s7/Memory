@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Map;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
-import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -16,7 +15,6 @@ import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.BounceInterpolator;
 import android.widget.LinearLayout;
 import com.snatik.matches.R;
 import com.snatik.matches.common.Shared;
@@ -51,7 +49,7 @@ public class BoardView extends LinearLayout {
 		int padding = getResources().getDimensionPixelSize(R.dimen.board_padding);
 		mScreenHeight = getResources().getDisplayMetrics().heightPixels - margin - padding*2;
 		mScreenWidth = getResources().getDisplayMetrics().widthPixels - padding*2 - Utils.px(20);
-		mViewReference = new HashMap<Integer, TileView>();
+		mViewReference = new HashMap<>();
 		setClipToPadding(false);
 	}
 

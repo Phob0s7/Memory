@@ -19,5 +19,4 @@ public class BackGameEvent extends AbstractEvent {
 	public String getType() {
 		return TYPE;
 	}
-
 }

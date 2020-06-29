@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/Titre"
+        android:layout_width="208dp"
+        android:layout_height="74dp"
+        android:layout_marginStart="264dp"
+        android:layout_marginLeft="264dp"
+        android:layout_marginTop="28dp"
+        android:text="@string/memory"
+        android:textColor="#00E2FF"
+        android:textSize="55sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/start_game_button1"
+        android:layout_width="93dp"
+        android:layout_height="61dp"
+        android:layout_marginStart="324dp"
+        android:layout_marginLeft="324dp"
+        android:layout_marginTop="228dp"
+        android:shadowColor="#B53636"
+        android:text="@string/jouer"
+        android:textColorHighlight="#9A4646"
+        android:textColorHint="#3A838C"
+        android:textColorLink="#AC4949"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

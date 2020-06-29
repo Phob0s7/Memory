@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Memory</string>
+    <string name="debug">regular</string>
+    <string name="background_image">Background image</string>
+    <string name="title">Title</string>
+    <string name="facile">Facile</string>
+    <string name="difficult">Difficulté</string>
+    <string name="moyen">Moyen</string>
+    <string name="memory">Memory</string>
+    <string name="jouer">Jouer</string>
+    <string name="temps">Temps</string>
+    <string name="score">Score</string>
+    <string name="_0">0</string>
+    <string name="_00_00">00:00</string>
+    <string name="button_back">Button back</string>
+    <string name="button_next">Button next</string>
+    <string name="animaux">Animaux</string>
+    <string name="mario_kart">Mario Kart</string>
+    <string name="th_mes">Thèmes</string>
+    <string name="tile">Tile</string>
+
+</resources>
